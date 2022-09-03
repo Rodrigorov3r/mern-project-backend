@@ -1,6 +1,5 @@
 //importo el modelo a trabajar
-import { json } from 'sequelize/types';
-import BlogModel from '../models/BlogModel';
+import BlogModel from '../models/BlogModel.js';
 
 //get all
 export const getAllBlogs = async (req, res) => {
@@ -19,7 +18,7 @@ export const getBlog = async (req, res) => {
     const blog = await BlogModel.findAll({
       where: { id: req.params.id },
     });
-    res.json(blog);
+    res.json(blog[0]);
   } catch (error) {
     res.json({ message: error.message });
   }

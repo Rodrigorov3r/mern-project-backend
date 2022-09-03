@@ -5,7 +5,7 @@ import {
   getAllBlogs,
   getBlog,
   updateBlog,
-} from '../controllers/BlogController';
+} from '../controllers/BlogController.js';
 
 const rutas = express.Router();
 
